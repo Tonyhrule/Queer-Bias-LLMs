@@ -4,11 +4,11 @@ This repository is an official implementation of Mitigating Bias in Queer Repres
 
 ## Project Overview
 
-Large Language Models (LLMs) have transformed natural language processing but often perpetuate societal biases, especially those affecting the LGBTQIA+ community. These biases can lead to misrepresentation and marginalization, reinforcing discrimination in AI-generated content. This project introduces a collaborative agent pipeline designed to detect and mitigate biases in LLM outputs, focusing specifically on pronoun inclusivity to accurately represent all gender identities.
+Large Language Models (LLMs) often perpetuate biases in pronoun usage, leading to misrepresentation or exclusion of queer individuals through inappropriate usage of traditionally gendered pronouns like "he" and "she." This project addresses the specific issue of biased pronoun usage in LLM outputs, particularly when inclusive language is essential to represent all identities accurately.
 
-We present a multi-agent framework that utilizes specialized agents to sequentially analyze, critique, and optimize language outputs for enhanced inclusivity. By addressing the nuanced challenges of LGBTQIA+ representation, this work aims to advance the development of socially responsible AI that respects and reflects the diversity of human identities.
+To address this issue, we introduce a collaborative agent pipeline designed to detect and mitigate these biases by analyzing and optimizing pronoun usage for inclusivity. Our multi-agent framework includes specialized agents for both identifying biased language and applying corrective measures to enhance inclusivity.
 
-Evaluations using the Tango dataset—a benchmark focused on gender pronoun usage—demonstrate that this approach improves inclusive pronoun classification by 11.2 percentage points over the baseline GPT-4 model, achieving statistical significance (χ² = 78.52, p < 0.001).
+We evaluated our approach using the Tango dataset, a benchmark focused on gender pronoun usage. Results show that our method achieves a 32.6 percentage point improvement over GPT-4 in correctly disagreeing with inappropriate traditionally gendered pronouns (χ² = 38.57, p < 0.0001). These findings demonstrate the potential of agent-driven frameworks to enhance fairness and inclusivity in AI-generated content, highlighting their efficacy in reducing biases and advancing socially responsible AI.
 
 ## Project Structure
 
