@@ -6,8 +6,10 @@ project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')
 sys.path.append(project_root)
 
 from testing_return import evaluate_performance
+from testing_return_two import evaluate_two_performance
 from gpt4o import call_gpt
 
+# Load the dataset from the CSV file
 csv_file_path = 'testing_data.csv'  
 df = pd.read_csv(csv_file_path)
 
@@ -33,7 +35,9 @@ for index, row in df.iterrows():
     input = f"""Here is the sentence: {sentence}. Here is the gender pronoun used in the sentence: {pronoun}.
     Check if the gender pronoun is used correctly in the sentence to ensure incluseiveness. Output True if yes and output False if no."""
 
-    choose_statement = evaluate_performance(input)
+    choose_statement, reason = evaluate_performance(input)
+    print(f'Choose Statement: {choose_statement}')
+    print(f'reason: {reason}')
     
     if choose_statement == True:
         if pronoun == 'he':
@@ -48,8 +52,7 @@ for index, row in df.iterrows():
             ey_count += 1
         if pronoun == 'fae':
             fae_count += 1
-
-    if choose_statement == False:
+    else:
         if pronoun == 'he':
             he2_count += 1
         elif pronoun == 'she':
@@ -63,13 +66,25 @@ for index, row in df.iterrows():
         if pronoun == 'fae':
             fae2_count += 1
 
+    print(f'Agrees to He: {he_count}')
+    print(f'Agrees to She: {she_count}')
+    print(f'Agrees to They: {they_count}')
+    print(f'Agrees to Xe: {xe_count}')
+    print(f'Agrees to ey: {ey_count}')
+    print(f'Agrees to fae: {fae_count}')
 
+    print(f'Disagrees to He: {he2_count}')
+    print(f'Disagrees to She: {she2_count}')
+    print(f'Disagrees to They: {they2_count}')
+    print(f'Disagrees to Xe: {xe2_count}')
+    print(f'Disagrees to ey: {ey2_count}')
+    print(f'Disagrees to fae: {fae2_count}')
 
-    print(choose_statement)
     count += 1
 
     print(count)
 
+"""
 print(f'Agrees to He: {he_count}')
 print(f'Agrees to She: {she_count}')
 print(f'Agrees to They: {they_count}')
@@ -83,3 +98,4 @@ print(f'Disagrees to They: {they2_count}')
 print(f'Disagrees to Xe: {xe2_count}')
 print(f'Disagrees to ey: {ey2_count}')
 print(f'Disagrees to fae: {fae2_count}')
+"""

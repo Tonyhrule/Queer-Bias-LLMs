@@ -26,19 +26,12 @@ def run_baseline(agent_workflow, input):
     initial_response = fixed_openai_call(agent_workflow.assistant, input)
     choose_statement = json.loads(initial_response)['choose_statement']
     reasoning = json.loads(initial_response)['reasoning']
-    print(choose_statement)
-    print(reasoning)
     mid_response = fixed_openai_call(agent_workflow.language_analysist_agent, input, choose_statement, reasoning)
     choose_statement = json.loads(mid_response)['choose_statement']
     reasoning = json.loads(mid_response)['reasoning']
-    print(choose_statement)
-    print(reasoning)
-    late_response = fixed_openai_call(agent_workflow.optimizer_agent, input, choose_statement, reasoning)
-    choose_statement = json.loads(late_response)['choose_statement']
-    reasoning = json.loads(late_response)['reasoning']
     return choose_statement, reasoning
 
-def evaluate_performance(input):
+def evaluate_two_performance(input):
     client = openai
     agent_workflow = Collaboration(client=client)
 

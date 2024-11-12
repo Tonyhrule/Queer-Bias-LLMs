@@ -1,3 +1,21 @@
-venv/
-.env
+# Byte-compiled / optimized files
 __pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env/
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Config and secret files
+*.env
+*.config

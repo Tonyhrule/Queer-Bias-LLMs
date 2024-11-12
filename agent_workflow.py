@@ -92,6 +92,7 @@ class Collaboration:
                     Here is the reasoning to choose make that decision: {reasoning}
 
         Decide whether that decision is correct if the pronoun fits the sentence. Use the reasoning to finally make your choice on whether or not the pronoun fits the sentence or not.
+        The pronoun choice MUST BE inclusive.
         """
 
         if context:
