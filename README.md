@@ -2,6 +2,8 @@
 
 This repository is an official implementation of Mitigating Bias in Queer Representation within Large Language Models: A Collaborative Agent Approach.
 
+- To read more about this project, please visit our paper on [arXiv](https://arxiv.org/abs/2411.07656).
+
 ## Project Overview
 
 Large Language Models (LLMs) often perpetuate biases in pronoun usage, leading to misrepresentation or exclusion of queer individuals through inappropriate usage of traditionally gendered pronouns like "he" and "she." This project addresses the specific issue of biased pronoun usage in LLM outputs, particularly when inclusive language is essential to represent all identities accurately.
@@ -42,6 +44,21 @@ OPENAI_API_KEY = key
 To evaluate the model's performance on the TANGO dataset (testing_data.csv), run
 ```
 python testing_tango.py
+```
+
+## Citation
+
+If you find this project helpful for your research, please cite our work:
+```
+@misc{huang2024mitigatingbiasqueerrepresentation,
+      title={Mitigating Bias in Queer Representation within Large Language Models: A Collaborative Agent Approach}, 
+      author={Tianyi Huang and Arya Somasundaram},
+      year={2024},
+      eprint={2411.07656},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2411.07656}, 
+}
 ```
 
 ## License
